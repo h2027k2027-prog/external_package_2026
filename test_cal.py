@@ -1,5 +1,5 @@
 import pytest
-from calc import add, sub, mul, div
+from cal import add, sub, mul, div
 
 def add(a, b):
     assert add(10, 20) == 30
