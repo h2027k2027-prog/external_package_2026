@@ -11,15 +11,10 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v7    
 
-            - name: setup python
-              uses: actions/setup-python@v7
-              with:
-                  python-version: '3.12'
-
-            - name: install dependencies
+            - name: install required packages
               run: pip install -r require.txt
 
             - name: run test case
-              run: pytest --cov=calc --cov-report=term
+              run: pytest --cov=cal --cov-report=term
 
 
