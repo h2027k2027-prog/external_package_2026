@@ -10,5 +10,9 @@ jobs:
         steps:
             - name: checkout code
               uses: actions/checkout@v7
+              
+            - name: install required libraries
+              run: pip install pandas
+
             - name: run python
               run: python data.py
