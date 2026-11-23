@@ -1,14 +1,14 @@
 import pytest
 from cal import add, sub, mul, div
 
-def add(a, b):
+def test_add():
     assert add(10, 20) == 30
 
-def sub(a, b):
+def test_sub():
     assert sub(20, 10) == 10
 
-def mul(a, b):
+def test_mul():
     assert mul(10, 20) == 200
 
-def div(a, b):
+def test_div():
     assert div(20, 2) == 10
