@@ -1,20 +1,25 @@
-name: quality gateway implementation
+name: Quality Gateway Implementation
+
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    run-python-code:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout code
-              uses: actions/checkout@v7    
+  run-python-code:
+    runs-on: ubuntu-latest
 
-            - name: install required packages
-              run: pip install -r require.txt
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
 
-            - name: run test case
-              run: pytest --cov=calc --cov-report=term
+      - name: setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
 
+      - name: install required packages
+        run: pip install -r requirements.txt
 
+      - name: run test case
+        run: pytest --cov=calc --cov-report=term
