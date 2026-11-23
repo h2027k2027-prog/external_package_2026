@@ -12,8 +12,13 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v7
 
+            - name: setup python
+              uses: actions/setup-python@v7
+              with:
+                python-version: '3.12'
+
             - name: install required libraries
               run: python -m pip install -r require.txt 
-              
+
             - name: run python
               run: python data.py
