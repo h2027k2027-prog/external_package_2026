@@ -12,6 +12,12 @@ jobs:
             - name: checkout code
               uses: actions/checkout@v7
 
+            - name: check files
+              run: |
+                  pwd
+                  ls -la
+                  find . -type f
+
             - name: install required libraries
               run: python -m pip install pandas
 
