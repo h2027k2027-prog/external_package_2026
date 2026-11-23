@@ -1,25 +1,19 @@
 name: python external library
 
 on:
-  push:
-    branches:
-      - main
+    push:
+        branches:
+            - main
 
 jobs:
-  run-python-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout code
-        uses: actions/checkout@v4
+    run-python-code:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v7
 
-      - name: check files
-        run: |
-          pwd
-          ls -la
-          find . -name "*.py"
+            - name: install required libraries
+              run: python -m pip install pandas
 
-      - name: install required libraries
-        run: python -m pip install pandas
-
-      - name: run python
-        run: python data.py
+            - name: run python
+              run: python data.py
