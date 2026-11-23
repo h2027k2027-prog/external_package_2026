@@ -1,4 +1,4 @@
-from cal import add, sub, mul, div
+from calc import add, sub, mul, div
 def add(a, b):
     return a+b
 def sub(a, b):

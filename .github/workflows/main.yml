@@ -15,6 +15,6 @@ jobs:
               run: pip install -r require.txt
 
             - name: run test case
-              run: pytest --cov=cal --cov-report=term
+              run: pytest --cov=calc --cov-report=term
 
 
