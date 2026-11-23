@@ -13,7 +13,7 @@ jobs:
               uses: actions/checkout@v7
 
             - name: install required libraries
-              run: pip install -r require.txt
-
+              run: python -m pip install -r require.txt 
+              
             - name: run python
               run: python data.py
